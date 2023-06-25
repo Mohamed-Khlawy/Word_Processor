@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Word_Processor
 {
     internal static class Program
@@ -16,7 +17,7 @@ namespace Word_Processor
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new WordProcessor_Page());
+            Application.Run(new Welcome_Page());
         }
     }
 }

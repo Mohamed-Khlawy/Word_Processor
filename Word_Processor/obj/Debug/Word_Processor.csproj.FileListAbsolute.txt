@@ -8,6 +8,6 @@ G:\.NET\Projects\Word_Processor\Word_Processor\obj\Debug\Word_Processor.csproj.G
 G:\.NET\Projects\Word_Processor\Word_Processor\obj\Debug\Word_Processor.csproj.CoreCompileInputs.cache
 G:\.NET\Projects\Word_Processor\Word_Processor\obj\Debug\Word_Processor.exe
 G:\.NET\Projects\Word_Processor\Word_Processor\obj\Debug\Word_Processor.pdb
-G:\.NET\Projects\Word_Processor\Word_Processor\obj\Debug\Word_Processor.WordProcessor_Page.resources
 G:\.NET\Projects\Word_Processor\Word_Processor\obj\Debug\Word_Processor.Welcome_Page.resources
 G:\.NET\Projects\Word_Processor\Word_Processor\obj\Debug\Word_Processor.Word_Count_DialogBox.resources
+G:\.NET\Projects\Word_Processor\Word_Processor\obj\Debug\Word_Processor.WordProcessor_Page.resources

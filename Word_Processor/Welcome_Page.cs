@@ -16,5 +16,12 @@ namespace Word_Processor
         {
             InitializeComponent();
         }
+
+        private void btnNew_Page_Click(object sender, EventArgs e)
+        {
+            WordProcessor_Page wordProcessor_Page = new WordProcessor_Page();
+            wordProcessor_Page.Show();
+            this.Hide();
+        }
     }
 }

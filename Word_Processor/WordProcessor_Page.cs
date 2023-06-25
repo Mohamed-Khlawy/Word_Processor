@@ -17,6 +17,22 @@ namespace Word_Processor
             InitializeComponent();
         }
 
-        
+        private void WordProcessor_Page1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void newPageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Welcome_Page welcome_Page = new Welcome_Page();
+            welcome_Page.Show();
+        }
+
+        private void cleanThisPageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            WordProcessor_Page wordProcessor_Page = new WordProcessor_Page();
+            wordProcessor_Page.Show();
+        }
     }
 }
