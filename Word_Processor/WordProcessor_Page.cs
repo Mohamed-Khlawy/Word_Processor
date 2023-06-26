@@ -25,6 +25,12 @@ namespace Word_Processor
             FormTracker.AddForm(this);//=>important
             fileContent = fileContent_;
         }
+        private void ResetForm()
+        {
+            this.viewText.Text = "";
+            this.resultText.Text = "";
+            this.btnAnalysis.Text = "0 Word";
+        }
         private void WordProcessor_Page_Load(object sender, EventArgs e)
         {
             if (fileContent != "")
@@ -59,9 +65,11 @@ namespace Word_Processor
 
         private void cleanThisPageToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Dispose();//=>important
-            WordProcessor_Page wordProcessor_Page = new WordProcessor_Page();
-            wordProcessor_Page.Show();
+            ResetForm();
+            //this.Dispose();//=>important
+            //WordProcessor_Page wordProcessor_Page = new WordProcessor_Page();
+            //wordProcessor_Page.Text = "WordProcessor_Page" + FormTracker.formsCounter.ToString();
+            //wordProcessor_Page.Show();
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
@@ -87,17 +95,6 @@ namespace Word_Processor
                 MessageBox.Show("File Saved Succesfully", "Save Confirmation"
                     , MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-        }
-
-        private void returnToWolcomePageToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Welcome_Page welcome_Page = new Welcome_Page();
-            welcome_Page.Show();
-        }
-
-        private void closeTheApplicationToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

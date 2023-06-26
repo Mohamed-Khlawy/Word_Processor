@@ -48,7 +48,7 @@ namespace Word_Processor
             {
                 string filePath = openFileDialog.FileName;
                 string fileContent = File.ReadAllText(filePath);
-                WordProcessor_Page wordProcessor_Page = new WordProcessor_Page(fileContent);
+                WordProcessor_Page wordProcessor_Page = new WordProcessor_Page(fileContent);//=>important
                 wordProcessor_Page.Text = "WordProcessor_Page" + FormTracker.formsCounter.ToString();
                 wordProcessor_Page.Show();
                 this.Hide();
