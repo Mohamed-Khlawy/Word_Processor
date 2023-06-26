@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormTracker.cs" />
     <Compile Include="Welcome_Page.cs">
       <SubType>Form</SubType>
     </Compile>

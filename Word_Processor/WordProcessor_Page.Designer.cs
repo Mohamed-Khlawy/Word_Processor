@@ -55,9 +55,11 @@
             this.themeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.darkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.whiteModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.viewText = new System.Windows.Forms.TextBox();
+            this.resultText = new System.Windows.Forms.TextBox();
+            this.btnAnalysis = new System.Windows.Forms.Button();
+            this.returnToWolcomePageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.closeTheApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -98,14 +100,14 @@
             // newPageToolStripMenuItem
             // 
             this.newPageToolStripMenuItem.Name = "newPageToolStripMenuItem";
-            this.newPageToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.newPageToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
             this.newPageToolStripMenuItem.Text = "New Page";
             this.newPageToolStripMenuItem.Click += new System.EventHandler(this.newPageToolStripMenuItem_Click);
             // 
             // cleanThisPageToolStripMenuItem
             // 
             this.cleanThisPageToolStripMenuItem.Name = "cleanThisPageToolStripMenuItem";
-            this.cleanThisPageToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cleanThisPageToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
             this.cleanThisPageToolStripMenuItem.Text = "Clean This Page";
             this.cleanThisPageToolStripMenuItem.Click += new System.EventHandler(this.cleanThisPageToolStripMenuItem_Click);
             // 
@@ -114,15 +116,20 @@
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.openToolStripMenuItem.Text = "Open";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.saveToolStripMenuItem.Text = "Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
+            this.exitToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.returnToWolcomePageToolStripMenuItem,
+            this.closeTheApplicationToolStripMenuItem});
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.exitToolStripMenuItem.Text = "Exit";
@@ -146,7 +153,7 @@
             this.centerToolStripMenuItem,
             this.rightAlignToolStripMenuItem});
             this.textAlignToolStripMenuItem.Name = "textAlignToolStripMenuItem";
-            this.textAlignToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.textAlignToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.textAlignToolStripMenuItem.Text = "Text Align";
             // 
             // leftAlignToolStripMenuItem
@@ -170,19 +177,19 @@
             // pageColorToolStripMenuItem
             // 
             this.pageColorToolStripMenuItem.Name = "pageColorToolStripMenuItem";
-            this.pageColorToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.pageColorToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.pageColorToolStripMenuItem.Text = "Page Color";
             // 
             // foToolStripMenuItem
             // 
             this.foToolStripMenuItem.Name = "foToolStripMenuItem";
-            this.foToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.foToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.foToolStripMenuItem.Text = "Font Color";
             // 
             // fontsToolStripMenuItem
             // 
             this.fontsToolStripMenuItem.Name = "fontsToolStripMenuItem";
-            this.fontsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.fontsToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.fontsToolStripMenuItem.Text = "Fonts";
             // 
             // zoomToolStripMenuItem
@@ -192,7 +199,7 @@
             this.toolStripMenuItem3,
             this.toolStripMenuItem4});
             this.zoomToolStripMenuItem.Name = "zoomToolStripMenuItem";
-            this.zoomToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.zoomToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.zoomToolStripMenuItem.Text = "Zoom";
             // 
             // toolStripMenuItem2
@@ -253,51 +260,65 @@
             // darkToolStripMenuItem
             // 
             this.darkToolStripMenuItem.Name = "darkToolStripMenuItem";
-            this.darkToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.darkToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.darkToolStripMenuItem.Text = "Dark Mode";
             // 
             // whiteModeToolStripMenuItem
             // 
             this.whiteModeToolStripMenuItem.Name = "whiteModeToolStripMenuItem";
-            this.whiteModeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.whiteModeToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.whiteModeToolStripMenuItem.Text = "White Mode";
             // 
-            // textBox1
+            // viewText
             // 
-            this.textBox1.Location = new System.Drawing.Point(400, 140);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(975, 766);
-            this.textBox1.TabIndex = 1;
+            this.viewText.Location = new System.Drawing.Point(400, 140);
+            this.viewText.Multiline = true;
+            this.viewText.Name = "viewText";
+            this.viewText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.viewText.Size = new System.Drawing.Size(975, 766);
+            this.viewText.TabIndex = 1;
             // 
-            // textBox2
+            // resultText
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(12, 140);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(256, 715);
-            this.textBox2.TabIndex = 2;
+            this.resultText.BackColor = System.Drawing.SystemColors.Control;
+            this.resultText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.resultText.Location = new System.Drawing.Point(12, 140);
+            this.resultText.Multiline = true;
+            this.resultText.Name = "resultText";
+            this.resultText.Size = new System.Drawing.Size(256, 715);
+            this.resultText.TabIndex = 2;
             // 
-            // button1
+            // btnAnalysis
             // 
-            this.button1.Location = new System.Drawing.Point(12, 873);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 33);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "0 Word";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAnalysis.Location = new System.Drawing.Point(12, 873);
+            this.btnAnalysis.Name = "btnAnalysis";
+            this.btnAnalysis.Size = new System.Drawing.Size(107, 33);
+            this.btnAnalysis.TabIndex = 3;
+            this.btnAnalysis.Text = "0 Word";
+            this.btnAnalysis.UseVisualStyleBackColor = true;
+            // 
+            // returnToWolcomePageToolStripMenuItem
+            // 
+            this.returnToWolcomePageToolStripMenuItem.Name = "returnToWolcomePageToolStripMenuItem";
+            this.returnToWolcomePageToolStripMenuItem.Size = new System.Drawing.Size(256, 26);
+            this.returnToWolcomePageToolStripMenuItem.Text = "Return to Wolcome Page";
+            this.returnToWolcomePageToolStripMenuItem.Click += new System.EventHandler(this.returnToWolcomePageToolStripMenuItem_Click);
+            // 
+            // closeTheApplicationToolStripMenuItem
+            // 
+            this.closeTheApplicationToolStripMenuItem.Name = "closeTheApplicationToolStripMenuItem";
+            this.closeTheApplicationToolStripMenuItem.Size = new System.Drawing.Size(256, 26);
+            this.closeTheApplicationToolStripMenuItem.Text = "Close the Application";
+            this.closeTheApplicationToolStripMenuItem.Click += new System.EventHandler(this.closeTheApplicationToolStripMenuItem_Click);
             // 
             // WordProcessor_Page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1900, 981);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnAnalysis);
+            this.Controls.Add(this.resultText);
+            this.Controls.Add(this.viewText);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(1918, 1028);
@@ -305,7 +326,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WordProcessor_Page";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.WordProcessor_Page1_FormClosing);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.WordProcessor_Page_FormClosing);
+            this.Load += new System.EventHandler(this.WordProcessor_Page_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -342,9 +364,11 @@
         private System.Windows.Forms.ToolStripMenuItem leftAlignToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem centerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rightAlignToolStripMenuItem;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox viewText;
+        private System.Windows.Forms.TextBox resultText;
+        private System.Windows.Forms.Button btnAnalysis;
+        private System.Windows.Forms.ToolStripMenuItem returnToWolcomePageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem closeTheApplicationToolStripMenuItem;
     }
 }
 
