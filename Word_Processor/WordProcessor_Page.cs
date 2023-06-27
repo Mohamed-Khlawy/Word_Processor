@@ -96,5 +96,79 @@ namespace Word_Processor
                     , MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void leftAlignToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            viewText.TextAlign = HorizontalAlignment.Left;
+        }
+
+        private void centerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            viewText.TextAlign = HorizontalAlignment.Center;
+        }
+
+        private void rightAlignToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            viewText.TextAlign = HorizontalAlignment.Right;
+        }
+
+        private void pageColorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ColorDialog colorDialog = new ColorDialog();
+            if (colorDialog.ShowDialog() == DialogResult.OK)
+            { 
+                viewText.BackColor = colorDialog.Color;
+            }
+        }
+
+        private void foToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ColorDialog colorDialog = new ColorDialog();
+            if (colorDialog.ShowDialog() == DialogResult.OK)
+            {
+                viewText.ForeColor = colorDialog.Color;
+            }
+        }
+
+        private void fontsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FontDialog fontDialog = new FontDialog();
+            if (fontDialog.ShowDialog() == DialogResult.OK)
+            {
+                viewText.Font = fontDialog.Font;
+            }
+        }
+        private void zoom1ToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            float newSize = 0.25f;//=>important
+            viewText.Font = new Font(viewText.Font.FontFamily,
+                            viewText.Font.Size * newSize, viewText.Font.Style);
+        }
+        private void zoom2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            float newSize = 0.50f;//=>important
+            viewText.Font = new Font(viewText.Font.FontFamily,
+                            viewText.Font.Size * newSize, viewText.Font.Style);
+        }
+        private void zoom3ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            float newSize = 0.75f;//=>important
+            viewText.Font = new Font(viewText.Font.FontFamily,
+                            viewText.Font.Size * newSize, viewText.Font.Style);
+        }
+
+        private void zoom4ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            float newSize = 1.0f;//=>important
+            viewText.Font = new Font(viewText.Font.FontFamily,
+                            viewText.Font.Size * newSize, viewText.Font.Style);
+        }
+
+        private void zoom5ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            float newSize = 2.0f;//=>important
+            viewText.Font = new Font(viewText.Font.FontFamily,
+                viewText.Font.Size * newSize, viewText.Font.Style);
+        }
     }
 }
