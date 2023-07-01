@@ -51,14 +51,13 @@
             this.zoom5ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.analysisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.numberOfEachWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.numberOfSentencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.numberOfEachSeperatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.themeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.darkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.whiteModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewText = new System.Windows.Forms.TextBox();
             this.resultText = new System.Windows.Forms.TextBox();
-            this.btnAnalysis = new System.Windows.Forms.Button();
+            this.btnSummary = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -202,35 +201,35 @@
             // zoom1ToolStripMenuItem
             // 
             this.zoom1ToolStripMenuItem.Name = "zoom1ToolStripMenuItem";
-            this.zoom1ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.zoom1ToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
             this.zoom1ToolStripMenuItem.Text = "25%";
             this.zoom1ToolStripMenuItem.Click += new System.EventHandler(this.zoom1ToolStripMenuItem_Click_1);
             // 
             // zoom2ToolStripMenuItem
             // 
             this.zoom2ToolStripMenuItem.Name = "zoom2ToolStripMenuItem";
-            this.zoom2ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.zoom2ToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
             this.zoom2ToolStripMenuItem.Text = "50%";
             this.zoom2ToolStripMenuItem.Click += new System.EventHandler(this.zoom2ToolStripMenuItem_Click);
             // 
             // zoom3ToolStripMenuItem
             // 
             this.zoom3ToolStripMenuItem.Name = "zoom3ToolStripMenuItem";
-            this.zoom3ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.zoom3ToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
             this.zoom3ToolStripMenuItem.Text = "75%";
             this.zoom3ToolStripMenuItem.Click += new System.EventHandler(this.zoom3ToolStripMenuItem_Click);
             // 
             // zoom4ToolStripMenuItem
             // 
             this.zoom4ToolStripMenuItem.Name = "zoom4ToolStripMenuItem";
-            this.zoom4ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.zoom4ToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
             this.zoom4ToolStripMenuItem.Text = "100%";
             this.zoom4ToolStripMenuItem.Click += new System.EventHandler(this.zoom4ToolStripMenuItem_Click);
             // 
             // zoom5ToolStripMenuItem
             // 
             this.zoom5ToolStripMenuItem.Name = "zoom5ToolStripMenuItem";
-            this.zoom5ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.zoom5ToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
             this.zoom5ToolStripMenuItem.Text = "200%";
             this.zoom5ToolStripMenuItem.Click += new System.EventHandler(this.zoom5ToolStripMenuItem_Click);
             // 
@@ -238,7 +237,6 @@
             // 
             this.analysisToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.numberOfEachWordToolStripMenuItem,
-            this.numberOfSentencesToolStripMenuItem,
             this.numberOfEachSeperatorToolStripMenuItem});
             this.analysisToolStripMenuItem.Name = "analysisToolStripMenuItem";
             this.analysisToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
@@ -249,18 +247,14 @@
             this.numberOfEachWordToolStripMenuItem.Name = "numberOfEachWordToolStripMenuItem";
             this.numberOfEachWordToolStripMenuItem.Size = new System.Drawing.Size(268, 26);
             this.numberOfEachWordToolStripMenuItem.Text = "Number of Each Word";
-            // 
-            // numberOfSentencesToolStripMenuItem
-            // 
-            this.numberOfSentencesToolStripMenuItem.Name = "numberOfSentencesToolStripMenuItem";
-            this.numberOfSentencesToolStripMenuItem.Size = new System.Drawing.Size(268, 26);
-            this.numberOfSentencesToolStripMenuItem.Text = "Number of Sentences";
+            this.numberOfEachWordToolStripMenuItem.Click += new System.EventHandler(this.numberOfEachWordToolStripMenuItem_Click);
             // 
             // numberOfEachSeperatorToolStripMenuItem
             // 
             this.numberOfEachSeperatorToolStripMenuItem.Name = "numberOfEachSeperatorToolStripMenuItem";
             this.numberOfEachSeperatorToolStripMenuItem.Size = new System.Drawing.Size(268, 26);
             this.numberOfEachSeperatorToolStripMenuItem.Text = "Number of Each Seperator";
+            this.numberOfEachSeperatorToolStripMenuItem.Click += new System.EventHandler(this.numberOfEachSeperatorToolStripMenuItem_Click);
             // 
             // themeToolStripMenuItem
             // 
@@ -297,27 +291,31 @@
             // 
             this.resultText.BackColor = System.Drawing.SystemColors.Control;
             this.resultText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.resultText.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultText.Location = new System.Drawing.Point(12, 140);
             this.resultText.Multiline = true;
             this.resultText.Name = "resultText";
+            this.resultText.ReadOnly = true;
+            this.resultText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.resultText.Size = new System.Drawing.Size(256, 715);
             this.resultText.TabIndex = 2;
             // 
-            // btnAnalysis
+            // btnSummary
             // 
-            this.btnAnalysis.Location = new System.Drawing.Point(12, 873);
-            this.btnAnalysis.Name = "btnAnalysis";
-            this.btnAnalysis.Size = new System.Drawing.Size(107, 33);
-            this.btnAnalysis.TabIndex = 3;
-            this.btnAnalysis.Text = "0 Word";
-            this.btnAnalysis.UseVisualStyleBackColor = true;
+            this.btnSummary.Location = new System.Drawing.Point(12, 873);
+            this.btnSummary.Name = "btnSummary";
+            this.btnSummary.Size = new System.Drawing.Size(110, 33);
+            this.btnSummary.TabIndex = 3;
+            this.btnSummary.Text = "Text Summary";
+            this.btnSummary.UseVisualStyleBackColor = true;
+            this.btnSummary.Click += new System.EventHandler(this.btnSummary_Click);
             // 
             // WordProcessor_Page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1900, 981);
-            this.Controls.Add(this.btnAnalysis);
+            this.Controls.Add(this.btnSummary);
             this.Controls.Add(this.resultText);
             this.Controls.Add(this.viewText);
             this.Controls.Add(this.menuStrip1);
@@ -356,7 +354,6 @@
         private System.Windows.Forms.ToolStripMenuItem zoom4ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem zoom5ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem numberOfEachWordToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem numberOfSentencesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem numberOfEachSeperatorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem darkToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem whiteModeToolStripMenuItem;
@@ -366,7 +363,7 @@
         private System.Windows.Forms.ToolStripMenuItem rightAlignToolStripMenuItem;
         private System.Windows.Forms.TextBox viewText;
         private System.Windows.Forms.TextBox resultText;
-        private System.Windows.Forms.Button btnAnalysis;
+        private System.Windows.Forms.Button btnSummary;
         private System.Windows.Forms.ToolStripMenuItem zoom1ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem zoom2ToolStripMenuItem;
     }

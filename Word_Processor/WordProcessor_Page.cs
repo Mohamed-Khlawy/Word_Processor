@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Word_Processor
 {
@@ -29,7 +30,7 @@ namespace Word_Processor
         {
             this.viewText.Text = "";
             this.resultText.Text = "";
-            this.btnAnalysis.Text = "0 Word";
+            this.btnSummary.Text = "0 Word";
         }
         private void WordProcessor_Page_Load(object sender, EventArgs e)
         {
@@ -138,18 +139,21 @@ namespace Word_Processor
                 viewText.Font = fontDialog.Font;
             }
         }
+
         private void zoom1ToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             float newSize = 0.25f;//=>important
             viewText.Font = new Font(viewText.Font.FontFamily,
                             viewText.Font.Size * newSize, viewText.Font.Style);
         }
+
         private void zoom2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             float newSize = 0.50f;//=>important
             viewText.Font = new Font(viewText.Font.FontFamily,
                             viewText.Font.Size * newSize, viewText.Font.Style);
         }
+
         private void zoom3ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             float newSize = 0.75f;//=>important
@@ -169,6 +173,70 @@ namespace Word_Processor
             float newSize = 2.0f;//=>important
             viewText.Font = new Font(viewText.Font.FontFamily,
                 viewText.Font.Size * newSize, viewText.Font.Style);
+        }
+
+        private void numberOfEachWordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            resultText.Text = "";
+            string[] words = viewText.Text.Split(new char[] { ' ', '\t', '\n', '\r' },
+                StringSplitOptions.RemoveEmptyEntries);
+            Dictionary<string, int> wordCounts = new Dictionary<string, int>();
+            foreach (string word in words)
+            {
+                if (wordCounts.ContainsKey(word))
+                {
+                    wordCounts[word]++;
+                }
+                else
+                {
+                    wordCounts[word] = 1;
+                }
+            }
+            foreach (var kvp in wordCounts)
+            {
+                resultText.Text += $" {kvp.Key} ==> {kvp.Value}{Environment.NewLine}";
+            }
+        }
+
+        private void numberOfEachSeperatorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            resultText.Text = "";
+            char[] separators = { ' ', '\t', '\n', '\r', '.', ',', ':', 
+                ';', '?', '!', '"', '(', ')', '[', ']', '{', '}', '&', 
+                '*', '#', '$', '%', '+', '-', '=', '/', '\\', '_' };
+            Dictionary<char, int> separatorCounts = new Dictionary<char, int>();
+            foreach (char separator in separators)
+            {
+                int count = viewText.Text.Split(separator).Length - 1;
+                separatorCounts[separator] = count;
+            }
+            foreach (var kvp in separatorCounts)
+            {
+                resultText.Text += $" {kvp.Key} ==> {kvp.Value}{Environment.NewLine}";
+            }
+        }
+
+        private void btnSummary_Click(object sender, EventArgs e)
+        {
+            string[] words = viewText.Text.Split(new char[] { ' ', '\t', '\n', '\r' },
+                StringSplitOptions.RemoveEmptyEntries);
+            long Words = words.Length;
+
+            string textWithoutSpaces = viewText.Text.Replace(" ", "");
+            long Characters_WithoutSpaces = textWithoutSpaces.Length;
+
+            string textWithSpaces = viewText.Text;
+            long Characters_WithSpaces = textWithSpaces.Length;
+
+            string[] paragraphs = viewText.Text.Split(new[] { '\n' },
+                StringSplitOptions.RemoveEmptyEntries);
+            long Paragraphes = paragraphs.Length;
+
+            MessageBox.Show($"Words ==> {Words.ToString()} \n" +
+                $"Characters(WithoutSpaces) ==> {Characters_WithoutSpaces.ToString()} \n" +
+                $"Characters(WithSpaces) ==> {Characters_WithSpaces.ToString()} \n" +
+                $"Paragraphes ==> {Paragraphes.ToString()}"
+                ,"Text Summary",MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
     }
 }
