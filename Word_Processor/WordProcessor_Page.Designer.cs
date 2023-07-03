@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuItems = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newPageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,22 +58,25 @@
             this.viewText = new System.Windows.Forms.TextBox();
             this.resultText = new System.Windows.Forms.TextBox();
             this.btnSummary = new System.Windows.Forms.Button();
-            this.menuStrip1.SuspendLayout();
+            this.TextInformation = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.menuItems.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // menuItems
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuItems.BackColor = System.Drawing.Color.DimGray;
+            this.menuItems.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuItems.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.designToolStripMenuItem,
             this.analysisToolStripMenuItem,
             this.themeToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1900, 28);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuItems.Location = new System.Drawing.Point(0, 0);
+            this.menuItems.Name = "menuItems";
+            this.menuItems.Size = new System.Drawing.Size(1900, 28);
+            this.menuItems.TabIndex = 0;
+            this.menuItems.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
@@ -82,7 +85,7 @@
             this.openToolStripMenuItem,
             this.saveToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 26);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // newToolStripMenuItem
@@ -131,7 +134,7 @@
             this.fontsToolStripMenuItem,
             this.zoomToolStripMenuItem});
             this.designToolStripMenuItem.Name = "designToolStripMenuItem";
-            this.designToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
+            this.designToolStripMenuItem.Size = new System.Drawing.Size(69, 26);
             this.designToolStripMenuItem.Text = "Design";
             // 
             // textAlignToolStripMenuItem
@@ -141,7 +144,7 @@
             this.centerToolStripMenuItem,
             this.rightAlignToolStripMenuItem});
             this.textAlignToolStripMenuItem.Name = "textAlignToolStripMenuItem";
-            this.textAlignToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.textAlignToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.textAlignToolStripMenuItem.Text = "Text Align";
             // 
             // leftAlignToolStripMenuItem
@@ -168,21 +171,21 @@
             // pageColorToolStripMenuItem
             // 
             this.pageColorToolStripMenuItem.Name = "pageColorToolStripMenuItem";
-            this.pageColorToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.pageColorToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.pageColorToolStripMenuItem.Text = "Page Color";
             this.pageColorToolStripMenuItem.Click += new System.EventHandler(this.pageColorToolStripMenuItem_Click);
             // 
             // foToolStripMenuItem
             // 
             this.foToolStripMenuItem.Name = "foToolStripMenuItem";
-            this.foToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.foToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.foToolStripMenuItem.Text = "Font Color";
             this.foToolStripMenuItem.Click += new System.EventHandler(this.foToolStripMenuItem_Click);
             // 
             // fontsToolStripMenuItem
             // 
             this.fontsToolStripMenuItem.Name = "fontsToolStripMenuItem";
-            this.fontsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.fontsToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.fontsToolStripMenuItem.Text = "Fonts";
             this.fontsToolStripMenuItem.Click += new System.EventHandler(this.fontsToolStripMenuItem_Click);
             // 
@@ -195,7 +198,7 @@
             this.zoom4ToolStripMenuItem,
             this.zoom5ToolStripMenuItem});
             this.zoomToolStripMenuItem.Name = "zoomToolStripMenuItem";
-            this.zoomToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.zoomToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.zoomToolStripMenuItem.Text = "Zoom";
             // 
             // zoom1ToolStripMenuItem
@@ -239,7 +242,7 @@
             this.numberOfEachWordToolStripMenuItem,
             this.numberOfEachSeperatorToolStripMenuItem});
             this.analysisToolStripMenuItem.Name = "analysisToolStripMenuItem";
-            this.analysisToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
+            this.analysisToolStripMenuItem.Size = new System.Drawing.Size(76, 26);
             this.analysisToolStripMenuItem.Text = "Analysis";
             // 
             // numberOfEachWordToolStripMenuItem
@@ -268,30 +271,36 @@
             // darkToolStripMenuItem
             // 
             this.darkToolStripMenuItem.Name = "darkToolStripMenuItem";
-            this.darkToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
-            this.darkToolStripMenuItem.Text = "Dark Mode";
+            this.darkToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.darkToolStripMenuItem.Text = "DarkGray Mode";
+            this.darkToolStripMenuItem.Click += new System.EventHandler(this.darkToolStripMenuItem_Click);
             // 
             // whiteModeToolStripMenuItem
             // 
             this.whiteModeToolStripMenuItem.Name = "whiteModeToolStripMenuItem";
-            this.whiteModeToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            this.whiteModeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.whiteModeToolStripMenuItem.Text = "White Mode";
+            this.whiteModeToolStripMenuItem.Click += new System.EventHandler(this.whiteModeToolStripMenuItem_Click);
             // 
             // viewText
             // 
+            this.viewText.BackColor = System.Drawing.Color.LightGray;
             this.viewText.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewText.ForeColor = System.Drawing.Color.Black;
             this.viewText.Location = new System.Drawing.Point(400, 140);
             this.viewText.Multiline = true;
             this.viewText.Name = "viewText";
             this.viewText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.viewText.Size = new System.Drawing.Size(975, 766);
             this.viewText.TabIndex = 1;
+            this.viewText.TextChanged += new System.EventHandler(this.viewText_TextChanged);
             // 
             // resultText
             // 
-            this.resultText.BackColor = System.Drawing.SystemColors.Control;
+            this.resultText.BackColor = System.Drawing.Color.LightGray;
             this.resultText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.resultText.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resultText.ForeColor = System.Drawing.Color.Black;
             this.resultText.Location = new System.Drawing.Point(12, 140);
             this.resultText.Multiline = true;
             this.resultText.Name = "resultText";
@@ -302,24 +311,48 @@
             // 
             // btnSummary
             // 
+            this.btnSummary.BackColor = System.Drawing.Color.LightGray;
+            this.btnSummary.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSummary.Location = new System.Drawing.Point(12, 873);
             this.btnSummary.Name = "btnSummary";
-            this.btnSummary.Size = new System.Drawing.Size(110, 33);
+            this.btnSummary.Size = new System.Drawing.Size(153, 45);
             this.btnSummary.TabIndex = 3;
             this.btnSummary.Text = "Text Summary";
-            this.btnSummary.UseVisualStyleBackColor = true;
+            this.btnSummary.UseVisualStyleBackColor = false;
             this.btnSummary.Click += new System.EventHandler(this.btnSummary_Click);
+            // 
+            // TextInformation
+            // 
+            this.TextInformation.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextInformation.ForeColor = System.Drawing.Color.Black;
+            this.TextInformation.Location = new System.Drawing.Point(1518, 329);
+            this.TextInformation.Name = "TextInformation";
+            this.TextInformation.Size = new System.Drawing.Size(290, 550);
+            this.TextInformation.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(1497, 261);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(311, 23);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Information About Your Text";
             // 
             // WordProcessor_Page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(1900, 981);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.TextInformation);
             this.Controls.Add(this.btnSummary);
             this.Controls.Add(this.resultText);
             this.Controls.Add(this.viewText);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.menuItems);
+            this.ForeColor = System.Drawing.Color.Black;
+            this.MainMenuStrip = this.menuItems;
             this.MinimumSize = new System.Drawing.Size(1918, 1028);
             this.Name = "WordProcessor_Page";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -327,8 +360,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.WordProcessor_Page_FormClosing);
             this.Load += new System.EventHandler(this.WordProcessor_Page_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.menuItems.ResumeLayout(false);
+            this.menuItems.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -336,7 +369,7 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip menuItems;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
@@ -366,6 +399,8 @@
         private System.Windows.Forms.Button btnSummary;
         private System.Windows.Forms.ToolStripMenuItem zoom1ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem zoom2ToolStripMenuItem;
+        private System.Windows.Forms.Label TextInformation;
+        private System.Windows.Forms.Label label1;
     }
 }
 

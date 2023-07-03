@@ -19,12 +19,14 @@ namespace Word_Processor
         {
             InitializeComponent();
             FormTracker.AddForm(this);//=>important
+            darkToolStripMenuItem.Enabled = false;
         }
         public WordProcessor_Page(string fileContent_)//=>important
         {
             InitializeComponent();
             FormTracker.AddForm(this);//=>important
             fileContent = fileContent_;
+            darkToolStripMenuItem.Enabled = false;
         }
         private void ResetForm()
         {
@@ -100,79 +102,101 @@ namespace Word_Processor
 
         private void leftAlignToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            TextInformation.Text = "";
             viewText.TextAlign = HorizontalAlignment.Left;
+            this.viewText_TextChanged(sender, e);
         }
 
         private void centerToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            TextInformation.Text = "";
             viewText.TextAlign = HorizontalAlignment.Center;
+            this.viewText_TextChanged(sender, e);
         }
 
         private void rightAlignToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            TextInformation.Text = "";
             viewText.TextAlign = HorizontalAlignment.Right;
+            this.viewText_TextChanged(sender, e);
         }
 
         private void pageColorToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            TextInformation.Text = "";
             ColorDialog colorDialog = new ColorDialog();
             if (colorDialog.ShowDialog() == DialogResult.OK)
             { 
                 viewText.BackColor = colorDialog.Color;
             }
+            this.viewText_TextChanged(sender, e);
         }
 
         private void foToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            TextInformation.Text = "";
             ColorDialog colorDialog = new ColorDialog();
             if (colorDialog.ShowDialog() == DialogResult.OK)
             {
                 viewText.ForeColor = colorDialog.Color;
             }
+            this.viewText_TextChanged(sender, e);
         }
 
         private void fontsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            TextInformation.Text = "";
             FontDialog fontDialog = new FontDialog();
             if (fontDialog.ShowDialog() == DialogResult.OK)
             {
                 viewText.Font = fontDialog.Font;
             }
+            this.viewText_TextChanged(sender, e);
         }
 
         private void zoom1ToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
+            TextInformation.Text = "";
             float newSize = 0.25f;//=>important
             viewText.Font = new Font(viewText.Font.FontFamily,
                             viewText.Font.Size * newSize, viewText.Font.Style);
+            this.viewText_TextChanged(sender, e);
         }
 
         private void zoom2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            TextInformation.Text = "";
             float newSize = 0.50f;//=>important
             viewText.Font = new Font(viewText.Font.FontFamily,
                             viewText.Font.Size * newSize, viewText.Font.Style);
+            this.viewText_TextChanged(sender, e);
         }
 
         private void zoom3ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            TextInformation.Text = "";
             float newSize = 0.75f;//=>important
             viewText.Font = new Font(viewText.Font.FontFamily,
                             viewText.Font.Size * newSize, viewText.Font.Style);
+            this.viewText_TextChanged(sender, e);
         }
 
         private void zoom4ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            TextInformation.Text = "";
             float newSize = 1.0f;//=>important
             viewText.Font = new Font(viewText.Font.FontFamily,
                             viewText.Font.Size * newSize, viewText.Font.Style);
+            this.viewText_TextChanged(sender, e);
         }
 
         private void zoom5ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            TextInformation.Text = "";
             float newSize = 2.0f;//=>important
             viewText.Font = new Font(viewText.Font.FontFamily,
                 viewText.Font.Size * newSize, viewText.Font.Style);
+            this.viewText_TextChanged(sender, e);
         }
 
         private void numberOfEachWordToolStripMenuItem_Click(object sender, EventArgs e)
@@ -237,6 +261,57 @@ namespace Word_Processor
                 $"Characters(WithSpaces) ==> {Characters_WithSpaces.ToString()} \n" +
                 $"Paragraphes ==> {Paragraphes.ToString()}"
                 ,"Text Summary",MessageBoxButtons.OK,MessageBoxIcon.Information);
+        }
+
+        private void whiteModeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TextInformation.Text = "";
+            darkToolStripMenuItem.Enabled = true;
+            whiteModeToolStripMenuItem.Enabled = false;
+            this.BackColor = Color.White;
+            this.ForeColor = Color.Black;
+            this.menuItems.BackColor = Color.White;
+            this.menuItems.ForeColor = Color.Black;
+            this.resultText.BackColor = Color.White;
+            this.resultText.ForeColor = Color.Black;
+            this.viewText.BackColor = Color.White;
+            this.viewText.ForeColor = Color.Black;
+            this.btnSummary.BackColor = Color.White;
+            this.viewText_TextChanged(sender, e);
+        }
+
+        private void darkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TextInformation.Text = "";
+            darkToolStripMenuItem.Enabled = false;
+            whiteModeToolStripMenuItem.Enabled = true;
+            this.BackColor = Color.DimGray;
+            this.ForeColor = Color.Black;
+            this.menuItems.BackColor = Color.DimGray;
+            this.menuItems.ForeColor = Color.Black;
+            this.resultText.BackColor = Color.LightGray;
+            this.resultText.ForeColor = Color.Black;
+            this.viewText.BackColor = Color.LightGray;
+            this.viewText.ForeColor = Color.Black;
+            this.btnSummary.BackColor = Color.LightGray;
+            this.viewText_TextChanged(sender, e);
+        }
+
+        private void viewText_TextChanged(object sender, EventArgs e)
+        {
+            TextInformation.Text = "";
+            if (viewText.Text != "")
+            {
+                TextInformation.Text += "FontType ==> " + viewText.Font.ToString() + "\n" + "\n";
+                TextInformation.Text += "FontColor ==> " + viewText.ForeColor.ToString() + "\n" + "\n";
+                TextInformation.Text += "BackColor ==> " + viewText.BackColor.ToString() + "\n" + "\n";
+                TextInformation.Text += "Text Align ==> " + viewText.TextAlign.ToString() + "\n" + "\n";
+                if (this.BackColor == Color.DimGray)
+                    TextInformation.Text += "Dark Theme\n" + "\n";
+                else
+                    TextInformation.Text += "White Theme\n" + "\n";
+            }
+
         }
     }
 }

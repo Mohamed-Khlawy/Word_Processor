@@ -74,6 +74,7 @@
             this.MaximumSize = new System.Drawing.Size(700, 500);
             this.MinimumSize = new System.Drawing.Size(700, 500);
             this.Name = "Welcome_Page";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome_Page";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Welcome_Page_FormClosing);
             this.ResumeLayout(false);
