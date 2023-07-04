@@ -37,7 +37,7 @@ Welcome to the Word Processor, a Windows Forms application developed in C# that 
 
 The Word Processor application utilizes the following dependencies:
 
-.NET Framework 4.7.2 or later
+.NET Framework 4.7.2 
 
 ## Contributing
 
