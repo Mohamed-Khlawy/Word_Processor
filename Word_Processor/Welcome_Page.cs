@@ -60,5 +60,35 @@ namespace Word_Processor
         {
             Application.Exit();
         }
+
+        private void btnNew_Page_MouseEnter(object sender, EventArgs e)
+        {
+            btnNew_Page.BackColor = Color.LightGray;
+        }
+
+        private void btnNew_Page_MouseLeave(object sender, EventArgs e)
+        {
+            btnNew_Page.BackColor = Color.Silver;
+        }
+
+        private void btnOpen_Page_MouseEnter(object sender, EventArgs e)
+        {
+            btnOpen_Page.BackColor = Color.LightGray;
+        }
+
+        private void btnOpen_Page_MouseLeave(object sender, EventArgs e)
+        {
+            btnOpen_Page.BackColor = Color.Silver;
+        }
+
+        private void btnExit_Application_MouseEnter(object sender, EventArgs e)
+        {
+            btnExit_Application.BackColor = Color.LightGray;
+        }
+
+        private void btnExit_Application_MouseLeave(object sender, EventArgs e)
+        {
+            btnExit_Application.BackColor = Color.Silver;
+        }
     }
 }

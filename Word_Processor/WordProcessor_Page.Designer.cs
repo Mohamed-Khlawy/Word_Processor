@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WordProcessor_Page));
             this.menuItems = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -85,7 +86,7 @@
             this.openToolStripMenuItem,
             this.saveToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 26);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // newToolStripMenuItem
@@ -134,7 +135,7 @@
             this.fontsToolStripMenuItem,
             this.zoomToolStripMenuItem});
             this.designToolStripMenuItem.Name = "designToolStripMenuItem";
-            this.designToolStripMenuItem.Size = new System.Drawing.Size(69, 26);
+            this.designToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
             this.designToolStripMenuItem.Text = "Design";
             // 
             // textAlignToolStripMenuItem
@@ -242,7 +243,7 @@
             this.numberOfEachWordToolStripMenuItem,
             this.numberOfEachSeperatorToolStripMenuItem});
             this.analysisToolStripMenuItem.Name = "analysisToolStripMenuItem";
-            this.analysisToolStripMenuItem.Size = new System.Drawing.Size(76, 26);
+            this.analysisToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.analysisToolStripMenuItem.Text = "Analysis";
             // 
             // numberOfEachWordToolStripMenuItem
@@ -271,14 +272,14 @@
             // darkToolStripMenuItem
             // 
             this.darkToolStripMenuItem.Name = "darkToolStripMenuItem";
-            this.darkToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.darkToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
             this.darkToolStripMenuItem.Text = "DarkGray Mode";
             this.darkToolStripMenuItem.Click += new System.EventHandler(this.darkToolStripMenuItem_Click);
             // 
             // whiteModeToolStripMenuItem
             // 
             this.whiteModeToolStripMenuItem.Name = "whiteModeToolStripMenuItem";
-            this.whiteModeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.whiteModeToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
             this.whiteModeToolStripMenuItem.Text = "White Mode";
             this.whiteModeToolStripMenuItem.Click += new System.EventHandler(this.whiteModeToolStripMenuItem_Click);
             // 
@@ -325,7 +326,7 @@
             // 
             this.TextInformation.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextInformation.ForeColor = System.Drawing.Color.Black;
-            this.TextInformation.Location = new System.Drawing.Point(1518, 329);
+            this.TextInformation.Location = new System.Drawing.Point(1507, 328);
             this.TextInformation.Name = "TextInformation";
             this.TextInformation.Size = new System.Drawing.Size(290, 550);
             this.TextInformation.TabIndex = 4;
@@ -352,6 +353,7 @@
             this.Controls.Add(this.viewText);
             this.Controls.Add(this.menuItems);
             this.ForeColor = System.Drawing.Color.Black;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuItems;
             this.MinimumSize = new System.Drawing.Size(1918, 1028);
             this.Name = "WordProcessor_Page";
