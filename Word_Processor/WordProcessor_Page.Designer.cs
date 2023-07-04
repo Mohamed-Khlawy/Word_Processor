@@ -75,7 +75,7 @@
             this.themeToolStripMenuItem});
             this.menuItems.Location = new System.Drawing.Point(0, 0);
             this.menuItems.Name = "menuItems";
-            this.menuItems.Size = new System.Drawing.Size(1900, 28);
+            this.menuItems.Size = new System.Drawing.Size(1900, 30);
             this.menuItems.TabIndex = 0;
             this.menuItems.Text = "menuStrip1";
             // 
@@ -86,7 +86,7 @@
             this.openToolStripMenuItem,
             this.saveToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 26);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // newToolStripMenuItem
@@ -135,7 +135,7 @@
             this.fontsToolStripMenuItem,
             this.zoomToolStripMenuItem});
             this.designToolStripMenuItem.Name = "designToolStripMenuItem";
-            this.designToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
+            this.designToolStripMenuItem.Size = new System.Drawing.Size(69, 26);
             this.designToolStripMenuItem.Text = "Design";
             // 
             // textAlignToolStripMenuItem
@@ -145,7 +145,7 @@
             this.centerToolStripMenuItem,
             this.rightAlignToolStripMenuItem});
             this.textAlignToolStripMenuItem.Name = "textAlignToolStripMenuItem";
-            this.textAlignToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
+            this.textAlignToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.textAlignToolStripMenuItem.Text = "Text Align";
             // 
             // leftAlignToolStripMenuItem
@@ -172,21 +172,21 @@
             // pageColorToolStripMenuItem
             // 
             this.pageColorToolStripMenuItem.Name = "pageColorToolStripMenuItem";
-            this.pageColorToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
+            this.pageColorToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.pageColorToolStripMenuItem.Text = "Page Color";
             this.pageColorToolStripMenuItem.Click += new System.EventHandler(this.pageColorToolStripMenuItem_Click);
             // 
             // foToolStripMenuItem
             // 
             this.foToolStripMenuItem.Name = "foToolStripMenuItem";
-            this.foToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
+            this.foToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.foToolStripMenuItem.Text = "Font Color";
             this.foToolStripMenuItem.Click += new System.EventHandler(this.foToolStripMenuItem_Click);
             // 
             // fontsToolStripMenuItem
             // 
             this.fontsToolStripMenuItem.Name = "fontsToolStripMenuItem";
-            this.fontsToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
+            this.fontsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.fontsToolStripMenuItem.Text = "Fonts";
             this.fontsToolStripMenuItem.Click += new System.EventHandler(this.fontsToolStripMenuItem_Click);
             // 
@@ -199,7 +199,7 @@
             this.zoom4ToolStripMenuItem,
             this.zoom5ToolStripMenuItem});
             this.zoomToolStripMenuItem.Name = "zoomToolStripMenuItem";
-            this.zoomToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
+            this.zoomToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.zoomToolStripMenuItem.Text = "Zoom";
             // 
             // zoom1ToolStripMenuItem
@@ -243,7 +243,7 @@
             this.numberOfEachWordToolStripMenuItem,
             this.numberOfEachSeperatorToolStripMenuItem});
             this.analysisToolStripMenuItem.Name = "analysisToolStripMenuItem";
-            this.analysisToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
+            this.analysisToolStripMenuItem.Size = new System.Drawing.Size(76, 26);
             this.analysisToolStripMenuItem.Text = "Analysis";
             // 
             // numberOfEachWordToolStripMenuItem
@@ -266,7 +266,7 @@
             this.darkToolStripMenuItem,
             this.whiteModeToolStripMenuItem});
             this.themeToolStripMenuItem.Name = "themeToolStripMenuItem";
-            this.themeToolStripMenuItem.Size = new System.Drawing.Size(68, 24);
+            this.themeToolStripMenuItem.Size = new System.Drawing.Size(68, 26);
             this.themeToolStripMenuItem.Text = "Theme";
             // 
             // darkToolStripMenuItem

@@ -1,0 +1,13 @@
+G:\.NET\Projects\Word_Processor\Word_Processor\bin\Release\Word_Processor.exe.config
+G:\.NET\Projects\Word_Processor\Word_Processor\bin\Release\Word_Processor.exe
+G:\.NET\Projects\Word_Processor\Word_Processor\bin\Release\Word_Processor.pdb
+G:\.NET\Projects\Word_Processor\Word_Processor\obj\Release\Word_Processor.csproj.AssemblyReference.cache
+G:\.NET\Projects\Word_Processor\Word_Processor\obj\Release\Word_Processor.csproj.SuggestedBindingRedirects.cache
+G:\.NET\Projects\Word_Processor\Word_Processor\obj\Release\Word_Processor.Welcome_Page.resources
+G:\.NET\Projects\Word_Processor\Word_Processor\obj\Release\Word_Processor.WordProcessor_Page.resources
+G:\.NET\Projects\Word_Processor\Word_Processor\obj\Release\Word_Processor.Properties.Resources.resources
+G:\.NET\Projects\Word_Processor\Word_Processor\obj\Release\Word_Processor.Word_Count_DialogBox.resources
+G:\.NET\Projects\Word_Processor\Word_Processor\obj\Release\Word_Processor.csproj.GenerateResource.cache
+G:\.NET\Projects\Word_Processor\Word_Processor\obj\Release\Word_Processor.csproj.CoreCompileInputs.cache
+G:\.NET\Projects\Word_Processor\Word_Processor\obj\Release\Word_Processor.exe
+G:\.NET\Projects\Word_Processor\Word_Processor\obj\Release\Word_Processor.pdb
