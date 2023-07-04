@@ -24,6 +24,14 @@ Welcome to the Word Processor, a Windows Forms application developed in C# that 
 
 ## Getting Started
 
+1. Clone this repository 
+2. Open Setup_Word Processor Folder
+3. Open Debug Folder
+4. Double-Click on The Setup_Word Processor File
+5. Follow the instructions to complete installation
+6. Now you will find the Word Processor shortcut on your desktop
+7. Double-Click on the shortcut and enjoy using your Word Processor
+
 
 ## Dependencies
 
